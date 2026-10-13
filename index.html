@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#ff6b35" />
+  <title>食光机 · 校园食堂点评推荐</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍜</text></svg>" />
+</head>
+<body>
+
+  <!-- 顶部栏 -->
+  <div class="topbar">
+    <div id="topbarContent">
+      <h1>🍜 食光机</h1>
+      <div class="sub">校园食堂点评推荐 · 发现好菜，避开雷区</div>
+    </div>
+    <div class="search" id="searchBar">
+      <span>🔍</span>
+      <input id="searchInput" type="text" placeholder="搜菜品、窗口或食堂，如「油泼面」「清真」" />
+    </div>
+  </div>
+
+  <!-- 视图：发现 -->
+  <div class="view active" id="view-home"></div>
+  <!-- 视图：食堂 -->
+  <div class="view" id="view-canteen"></div>
+  <!-- 视图：排行 -->
+  <div class="view" id="view-rank"></div>
+  <!-- 视图：我的 -->
+  <div class="view" id="view-me"></div>
+  <!-- 视图：详情 -->
+  <div class="view" id="view-detail"></div>
+
+  <!-- 底部导航 -->
+  <div class="tabbar">
+    <div class="tab on" data-nav="home"><span class="ico">🏠</span>发现</div>
+    <div class="tab" data-nav="canteen"><span class="ico">🍚</span>食堂</div>
+    <div class="tab center" data-action="spin"><span class="ico">🎲</span>吃啥</div>
+    <div class="tab" data-nav="rank"><span class="ico">🏆</span>排行</div>
+    <div class="tab" data-nav="me"><span class="ico">👤</span>我的</div>
+  </div>
+
+  <!-- 弹窗容器 -->
+  <div class="mask" id="mask"></div>
+  <div class="toast" id="toast"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
